@@ -121,11 +121,41 @@ void exibirRelatorio(TCurso cursos[], int num_cursos){
     int i;
     for(i = 0; i < num_cursos; i++){
         printf("Curso Codigo: %d\n", cursos[i].codigo_Curso);
-        printf("  - CPC Continuo: %.4f\n", cursos[i].cpcContinuoCalculado);
-        printf("  - CPC Faixa:    %d\n", cursos[i].cpcFaixaCalculado);
-        printf("  - Situacao:     %s\n", (cursos[i].cpcFaixaCalculado < 3) ? "Insatisfatorio" : "Satisfatorio");
+        printf("CPC Continuo: %.4f\n", cursos[i].cpcContinuoCalculado);
+        printf("CPC Faixa: %d\n", cursos[i].cpcFaixaCalculado);
+        printf("Situacao: %s\n", (cursos[i].cpcFaixaCalculado < 3) ? "Insatisfatorio" : "Satisfatorio");
     }
 }
+
+
+
+
+void exibirCursosPorFaixa(TCurso cursos[], int num_cursos) {
+    int i;
+    int faixa_atual;
+    int existeCursoFaixa;
+
+    printf("\nRelatorio de Cursos por Faixa de CPC\n");
+
+    for (faixa_atual = 1; faixa_atual <= 5; faixa_atual++) {
+        printf("-------------------------------------------\n");
+        printf("Cursos com Faixa %d:\n", faixa_atual);
+        
+        existeCursoFaixa = 0; 
+        
+        for (i = 0; i < num_cursos; i++) {
+            if (cursos[i].cpcFaixaCalculado == faixa_atual) {
+                printf(" Codigo do Curso: %d (CPC Continuo: %.4f)\n", cursos[i].codigo_Curso, cursos[i].cpcContinuoCalculado);
+                existeCursoFaixa = 1; // pelo menos um curso foi encontrado
+            }
+        }
+
+        if (!existeCursoFaixa) {
+            printf("Nenhum curso está nesta faixa.\n");
+        }
+    }
+}
+
 
 
 int main() {
@@ -165,8 +195,17 @@ int main() {
 
     exibirRelatorio(cursos, numCursosLidos);
 
+    exibirCursosPorFaixa(cursos, numCursosLidos);
+
     igc_instituicao = calculaIGC(cursos, numCursosLidos);
-    printf("\n>>> Indice Geral de Cursos (IGC) da Instituicao: %.4f\n", igc_instituicao);
+
+    int faixa_igc = determinarFaixa(igc_instituicao);
+
+    printf("\nIndice Geral de Cursos (IGC) da Instituicao\n");
+
+    printf("Continuo: %.4f\n", igc_instituicao);
+
+    printf("Faixa:  %d\n", faixa_igc);
 
     return 0;
 }
