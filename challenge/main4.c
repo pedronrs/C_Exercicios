@@ -1,3 +1,5 @@
+// PEDRO DO NASCIMENTO REIS E LEONARDO DE ASSUNÇÃO MAIA 
+
 #include <stdio.h>
 #define MAX_CURSOS 100
 
