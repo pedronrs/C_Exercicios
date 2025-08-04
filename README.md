@@ -1,31 +1,14 @@
+# Exercícios de Programação em Linguagem C
 
-# 🚀 **`pedronrs/c-studies`**: Fundamentos de C na Prática
+Este repositório é uma coleção de exercícios, desafios e provas de programação resolvidos na linguagem C. Ele serve como um arquivo pessoal para registro de estudos e práticas da matéria de Fundamentos de Programação.
 
-Bem-vindo ao meu repositório de estudos em C. Aqui eu compilo e pratico os **fundamentos da programação** através de exercícios e desafios, com foco em C. Este é meu espaço para solidificar conceitos e documentar meu progresso.
+## Estrutura do Repositório
 
----
+O repositório está organizado nos seguintes diretórios para uma navegação clara:
 
-## 🎯 **Conteúdo deste repositório**
+-   **/everyday_code_project**: Contém soluções para desafios de programação estruturados, organizados por semana ou tópico.
+    -   `/Week 1`: Problemas da primeira semana de estudos diários relembrando conceitos introdutórios como Vetores e Arrays.
 
-Este projeto é um "playground" para os seguintes tópicos, organizados para fácil consulta:
+-   **/questions_n_exercises**: Uma coleção geral de questões e exercícios de programação que servirão como base das resoluções.
 
-* **Ponteiros**: Entendimento e manipulação direta de memória.
-* **Funções**: Modularização e organização de código.
-* **Vetores e Matrizes**: Estruturas de dados básicas e suas aplicações.
-* **Recursividade**: A arte de resolver problemas que se auto-replicam.
-* **Métodos de Ordenação (Sorting)**: Implementações de algoritmos clássicos como Bubble, Selection, Insertion, Quick e Merge Sort.
-* **Desafios e Problemas**: Aplicação combinada de conhecimentos em exercícios variados.
-
----
-
-## ✨ **Estrutura**
-
-Os exercícios estão separados por tópicos em diretórios específicos (e.g., `ponteiros/`, `funcoes/`, `ordenacao/`). Cada diretório contém os arquivos `.c` dos problemas e suas soluções.
-
----
-
-## 🤝 **Conecte-se**
-
-Dúvidas, sugestões ou apenas um papo sobre C? Me encontre no GitHub: **@pedronrs**.
-
----
+-   **/old_tests**: Arquivos depreciados e casos de teste antigos. //Apenas a fins de arquivamento.
