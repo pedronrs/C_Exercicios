@@ -52,6 +52,12 @@ int calculate_mdc(int number1, int number2)
 
 int calculate_mmc(int number1, int number2)
 {
+    //verifica divisão por 0
+    if(number1 == 0 || number2 == 0)
+    {
+        return 0;
+    }
+    
     int calc = (number1 * number2) / calculate_mdc(number1, number2);
 
     return calc;
