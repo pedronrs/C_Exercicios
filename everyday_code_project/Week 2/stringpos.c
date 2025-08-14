@@ -23,4 +23,3 @@ void position_string(char* s, int p, int n, char* ns)
     ns[i] = '\0';   
     printf("entrada: %s \nsaída: %s ", s , ns);
 }
-
