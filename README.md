@@ -8,6 +8,7 @@ O repositório está organizado nos seguintes diretórios para uma navegação c
 
 -   **/everyday_code_project**: Contém soluções para desafios de programação estruturados, organizados por semana ou tópico.
     -   `/Week 1`: Problemas da primeira semana de estudos diários relembrando conceitos introdutórios como Vetores e Arrays.
+    -   `/Week 2`: Problemas da segunda semana de estudos e começo das aulas, introdução a manipulação de strings em C.
 
 -   **/questions_n_exercises**: Uma coleção geral de questões e exercícios de programação que servirão como base das resoluções.
 
