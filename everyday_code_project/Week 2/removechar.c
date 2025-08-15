@@ -1,30 +1,28 @@
 //Desenvolver uma função que remova todas as ocorrências de um char em uma string.
 #include <stdio.h>
-
-//método adotado: reescrever a string sem os caracteres num array auxiliar
-int num_removes_char( char* s, char c)
-{
-    int size=0;int j=0; int i=0;
-    while(s[size])
-    {size++;}
-    char s_aux[size+1]; //+1 caracter nulo
-
-    while(s[i])
-    {
-        if(s[i]!=c)
-        {
-            s_aux[j++] = s[i];
-            
-        }
-        i++;
-    }
-    s_aux[j] = '\0';
-    return j;
-}
-
+//método adotado: reescrever a string sem os caracteres com dois índices no array.
+void remove_ch(char* s, char c);
 
 int main()
 {
+    char ch[30] = "\naaataaaaeaaasaaataaaea\n"; //teste
+    printf("%s",ch);
+    remove_ch(ch,'a'); //caracter único é passado como aspas simples 
+    printf("%s",ch);
     return 0;
+}
+
+void remove_ch( char* s, char c)
+{
+    int j=0; int i=0;
+    while(s[i])
+    {
+        if(s[i]!=c) //dessa forma só copiaremos os caracteres que não sejam "c".
+        {
+            s[j++] = s[i]; 
+        }
+        i++;
+    }
+    s[j] = '\0';//fecha a string com caracter nulo após todas as iterações
 }
 
