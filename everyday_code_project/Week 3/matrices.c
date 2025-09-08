@@ -70,21 +70,18 @@ int mat_sim(int ordem, int matriz[ordem][ordem])
 
 //Implementar uma função que dada uma matriz M mxn, gere um vetor V de tamanho n, onde cada elemento do vetor consiste na soma dos elementos de uma coluna de M. Ou seja, o elemento v[0] consiste na soma dos elementos da primeira coluna de M , o elemento v[1] consiste na soma dos elementos da segunda coluna de M, e assim por diante.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void v_soma_col(int lin, int col, int matriz[lin][col], int v[col])
+{
+    int i,j;
+    for(i=0; i < col; i++)
+    {
+        v[i] = 0; // toda coluna deve começar a somar a partir de 0, evitando qualquer lixo.
+        for(j=0; j < lin; j++)
+        {
+            v[i] += matriz[j][i]; 
+        }
+    }
+}
 
 //Considere uma loja que mantém em uma matriz o total vendido por cada funcionário por todos os meses do ano (tendo portanto 12 linhas e 10 colunas sendo as colunas os 10 funcionários). Pede-se o desenvolvimento de uma função para cada item abaixo
 /*
