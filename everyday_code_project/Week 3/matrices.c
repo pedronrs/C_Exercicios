@@ -3,7 +3,7 @@
 
 //Uma matriz transposta é obtida invertendo as linhas pelas colunas da matriz original, sendo portanto cada elemento da linha l  e coluna c na matriz original passa a posição c e l na transposta.
 
-void mat_transp(int lin, int col, float matriz[lin][col], float transposta[col][lin]//sendo a transposta tendo suas ordens mxn trocadas para nxm)
+void mat_transp(int lin, int col, float matriz[lin][col], float transposta[col][lin])//sendo a transposta tendo suas ordens mxn trocadas para nxm
 {
     int i,j;
     for(i=0; i < lin; i++)
@@ -95,3 +95,9 @@ d. Determinar o mês com maior índice de vendas;
 
 e. Determinar o funcionário que menos vendeu durante o ano.
 */
+
+//a
+calc_total(int funcionarios, int meses, matriz[funcionarios][meses])
+{
+    
+}

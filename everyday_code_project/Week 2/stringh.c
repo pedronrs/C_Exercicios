@@ -1,4 +1,4 @@
-#include <stdio.h>
+  #include <stdio.h>
 
 //Escreva a função strlen do <string.h>
 
